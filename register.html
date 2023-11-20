@@ -36,7 +36,7 @@
             <div>
                 <label for="birthday" class="form-label">Birthday</label>
                 <select id="month" name="month">
-                    <option value="January">January</option>
+                    <!--<option value="January">January</option>
                     <option value="Febuary">Febuary</option>
                     <option value="March">March</option>
                     <option value="April">April</option>
@@ -47,10 +47,10 @@
                     <option value="September">September</option>
                     <option value="October">October</option>
                     <option value="November">November</option>
-                    <option value="December">Decmeber</option>
+                    <option value="December">Decmeber</option>-->
                 </select>
                 <select id="day" name="day">
-                    <option value="1">1</option>
+                    <!--<option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -80,10 +80,10 @@
                     <option value="28">28</option>
                     <option value="29">29</option>
                     <option value="30">30</option>
-                    <option value="31">31</option>
+                    <option value="31">31</option>-->
                 </select>
                 <select id="year" name="year">
-                    <option value="1900">1900</option>
+                    <!--<option value="1900">1900</option>
                     <option value="1901">1901</option>
                     <option value="1902">1902</option>
                     <option value="1903">1903</option>
@@ -206,7 +206,7 @@
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
-                    <option value="2023">2023</option>
+                    <option value="2023">2023</option>-->
                 </select>
             </div>
             <div>
@@ -216,5 +216,27 @@
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
+    <script>
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const days = Array.from({ length: 31 }, (x, i) => i + 1);
+        const years = Array.from({ length: 124 }, (x, i) => 1900 + i);
+
+        const generateOptions = (selectElement, data) => {
+            data.forEach(optionValue => {
+                const option = document.createElement('option');
+                option.value = optionValue;
+                option.textContent = optionValue;
+                selectElement.appendChild(option);
+            });
+        };
+
+        const monthSelect = document.getElementById('month');
+        const daySelect = document.getElementById('day');
+        const yearSelect = document.getElementById('year');
+
+        generateOptions(monthSelect, months);
+        generateOptions(daySelect, days);
+        generateOptions(yearSelect, years);
+    </script>
 </body>
 </html>
