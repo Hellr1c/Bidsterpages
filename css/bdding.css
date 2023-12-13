@@ -1,0 +1,61 @@
+:root {
+    --bg: #222222;
+    --yelText: #DAA520;
+    --redText: #DF1237;
+}
+
+.headercontianer {
+    color: white;
+}
+
+.infocontainer {
+    color: white;
+}
+
+.boxcontainer {
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxheader {
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--yelText);
+    text-align: center;
+    border: 1px solid;
+   }
+   
+   button {
+    background-color: white;
+    color: var(--yelText);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+   }
+   
+   button:hover {
+    background-color: var(--yelText);
+   }
+
+   #mine {
+    background-color: red;
+    border: 1px solid red;
+   }
+
+   #grab {
+    background-color: orange;
+    border: 1px solid orange;
+   }
+
+   #steal {
+    background-color: greenyellow;
+    border: 1px solid yellowgreen;
+   }
